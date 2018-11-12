@@ -20,7 +20,7 @@ public class Conexion_DB {
         Connection con = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            String urlDb = "jdbc:mysql://localhost:3306/clientesdb";
+            String urlDb = "jdbc:mysql://localhost:3306/clientes";
             con = (java.sql.DriverManager.getConnection(urlDb, "root", ""));
 
         } catch (ClassNotFoundException ex) {

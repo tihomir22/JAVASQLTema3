@@ -25,8 +25,10 @@ public class Tema3SQLJava {
         Connection con = conexiondb.abrirConexion();
         System.out.println("Conexion abierta");
         ClienteDAO cliDAO=new ClienteDAO();
-        cliDAO.actualiza(con, new Cliente(14,"Andreu","Furio","Benavent","AutismusMAximus","HeyBoss"));
-        
+        cliDAO.actualiza(con, new Cliente(15,"Andreu","Furio","Benavent","Autismus","HeyBoss"));
+        cliDAO.insertar(con, new Cliente(1488,"Tihomir","Stoychev","Stoychev","DJ","heyboss"));
+        cliDAO.delete(con, 1488);
+        cliDAO.select(con, 33);
         System.out.println("Cerrando conexion");
         conexiondb.CerrarConsulta(con);
         
